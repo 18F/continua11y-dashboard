@@ -1,0 +1,39 @@
+{
+  "name": "continu-a11y",
+  "version": "1.0.0",
+  "description": "Riff on stvnrlly's continua11y, CI tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/18F/continu-a11y.git"
+  },
+  "keywords": [
+    "accessibility",
+    "CI",
+    "dashboard"
+  ],
+  "author": "baccigalupi",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/18F/continu-a11y/issues"
+  },
+  "homepage": "https://github.com/18F/continu-a11y#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cfenv": "^1.0.3",
+    "dotenv": "^2.0.0",
+    "express": "^4.14.0",
+    "knex": "^0.12.2",
+    "mustache-express": "^1.2.2",
+    "pg": "^6.1.0",
+    "uswds": "^0.13.1"
+  },
+  "devDependencies": {
+    "codeclimate-test-reporter": "^0.4.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.1.0"
+  }
+}
