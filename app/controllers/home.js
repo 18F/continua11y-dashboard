@@ -5,16 +5,12 @@ const path        = require('path');
 
 const Mustache    = require('mustache');
 
-const viewDir     = path.resolve(__dirname, '../views');
-const templateDir = path.resolve(__dirname, '../templates');
+const templates   = require('../templates');
+templates.load();
 
-const layoutTemplate  = fs.readFileSync(templateDir + '/layout.mustache').toString();
-const layoutView      = require(viewDir + '/layout');
-
-const homeTemplate    = fs.readFileSync(templateDir + '/home.mustache').toString();
-const homeView        = require(viewDir + '/home');
+const views       = require('../views');
 
 module.exports = function home(req, res) {
-  let rendered = Mustache.render(layoutTemplate, Object.assign({}, layoutView, homeView), {page: homeTemplate});
+  let rendered = Mustache.render(templates.raw.layout, Object.assign({}, views.layout, views.home), {page: templates.raw.home});
   res.send(rendered);
 };
