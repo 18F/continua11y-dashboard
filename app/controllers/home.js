@@ -15,6 +15,6 @@ const homeTemplate    = fs.readFileSync(templateDir + '/home.mustache').toString
 const homeView        = require(viewDir + '/home');
 
 module.exports = function home(req, res) {
-  let rendered = Mustache.render(layoutTemplate, Object.assign({}, layoutView, homeView), {page: homeTemplate})
+  let rendered = Mustache.render(layoutTemplate, Object.assign({}, layoutView, homeView), {page: homeTemplate});
   res.send(rendered);
 };
