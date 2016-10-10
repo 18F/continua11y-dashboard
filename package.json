@@ -4,7 +4,9 @@
   "description": "Riff on stvnrlly's continua11y, CI tool",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/ --recursive"
+    "test": "NODE_ENV=test node_modules/.bin/mocha --recursive --slow 1500",
+    "lint": "node_modules/.bin/jshint app/ test/",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -34,6 +36,9 @@
   "devDependencies": {
     "codeclimate-test-reporter": "^0.4.0",
     "istanbul": "^0.4.5",
-    "mocha": "^3.1.0"
+    "jshint": "^2.9.3",
+    "mocha": "^3.1.0",
+    "nodemon": "^1.11.0",
+    "zombie": "^4.2.1"
   }
 }
