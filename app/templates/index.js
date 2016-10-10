@@ -4,14 +4,11 @@ const fs    = require('fs');
 const path  = require('path');
 const _     = require('lodash');
 
-module.exports.raw = {};
-module.exports.compiled = {};
-
 module.exports.load = load;
 
 function load(basePath, container) {
   basePath = basePath || path.resolve(__dirname);
-  container = container || module.exports.raw;
+  container = container || module.exports;
   loadFiles(fs.readdirSync(basePath), basePath, container);
 };
 

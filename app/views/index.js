@@ -24,7 +24,8 @@ function requireThisLevel(paths, basePath, container) {
     })
     .filter((fullPath) => {
       return fs.statSync(fullPath).isFile() &&
-        path.extname(fullPath) === '.js';
+        path.extname(fullPath) === '.js' &&
+        path.basename(fullPath, '.js') !== 'index';
     })
     .forEach((fullPath) => {
       requireFile(fullPath, container);

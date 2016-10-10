@@ -9,16 +9,16 @@ describe('templates index', () => {
   });
 
   it('make available templates at the root level', () => {
-    assert(templates.raw['404']);
-    assert(templates.raw.home);
-    assert(templates.raw.layout);
+    assert(templates['404_page']);
+    assert(templates.home_page);
+    assert(templates.layout);
   });
 
   it('does not load js files', () => {
-    assert(!templates.raw['index.js']);
+    assert(!templates['index.js']);
   });
 
   it('gathers nested templates', () => {
-    assert(templates.raw.home_partials.about.accesibility);
+    assert(templates.home.about.accesibility);
   });
 });

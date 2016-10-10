@@ -12,24 +12,16 @@ const bodyParser        = require('body-parser');
 const enableCORS        = require('./app/config/enable-cors');
 const routes            = require(appDir + '/routes');
 
+const notFound          = require(appDir + '/controllers/not-found');
+const error             = require(appDir + '/controllers/error');
+
 const app               = express();
 
 app.use(express.static(appDir + '/public'));
-
 app.use(enableCORS);
-
 app.use('/', routes);
 
-app.use(function (req, res) {
-  res.status(404);
-  res.render('404.mustache');
-});
-
-app.use(function (error, req, res, next) {
-  console.log(error);
-  // TODO: some kind of better error logging here!
-  res.status(500);
-  res.render('500.mustache');
-});
+app.use(notFound);
+app.use(error);
 
 module.exports = app;
