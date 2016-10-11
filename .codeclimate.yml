@@ -1,0 +1,19 @@
+engines:
+  eslint:
+    enabled: true
+  nodesecurity:
+    enabled: true
+  duplication:
+    enabled: true
+  config:
+    languages:
+    - javascript
+ratings:
+  paths:
+  - app/**
+  - scripts/**
+  - app.js
+  - index.js
+exclude_paths:
+- test/**/*
+- node_modules
