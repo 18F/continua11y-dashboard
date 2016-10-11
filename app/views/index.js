@@ -1,7 +1,8 @@
 'use strict';
 
-const fs    = require('fs');
-const path  = require('path');
+const fs        = require('fs');
+const path      = require('path');
+const dirHelper = require('../recursive-directory-helper');
 
 module.exports.load = load;
 
@@ -31,16 +32,7 @@ function requireThisLevel(paths, basePath, container) {
     });
 }
 
-function requireNestedFiles(paths, basePath, container) {
-  paths
-    .filter((partialPath) => {
-      let fullPath = path.resolve(basePath, partialPath);
-      return !fs.statSync(fullPath).isFile();
-    })
-    .forEach((partialPath) => {
-      goDeep(basePath, partialPath, container);
-    });
-}
+let requireNestedFiles = dirHelper.requireNested(goDeep);
 
 function requireFile(filePath, container) {
   let name = path.basename(filePath, '.js');

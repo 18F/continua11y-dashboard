@@ -1,8 +1,9 @@
 'use strict';
 
-const fs    = require('fs');
-const path  = require('path');
-const _     = require('lodash');
+const fs        = require('fs');
+const path      = require('path');
+const _         = require('lodash');
+const dirHelper = require('../recursive-directory-helper');
 
 module.exports.load = load;
 
@@ -31,16 +32,7 @@ function loadFilesThisLevel(paths, basePath, container) {
     });
 }
 
-function loadNestedFiles(paths, basePath, container) {
-  paths
-    .filter((partialPath) => {
-      let fullPath = path.resolve(basePath, partialPath);
-      return !fs.statSync(fullPath).isFile();
-    })
-    .forEach((partialPath) => {
-      goDeep(basePath, partialPath, container);
-    });
-}
+let loadNestedFiles = dirHelper.requireNested(goDeep);
 
 function loadFile(filePath, container) {
   let name = path.basename(filePath, '.mustache');
