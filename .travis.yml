@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+- "4.4.7"
+cache:
+  directories:
+  - node_modules
+sudo: false
+addons:
+  postgresql: "9.4"
+before_script:
+- psql -c 'create database continua11y_test;' -U postgres
+script: npm test --coverage
+after_script:
+- codeclimate-test-reporter < coverage/lcov.info
+- npm install -g pa11y-crawl
+- pa11y-crawl --run "npm start" --ci http://localhost:3000
+notifications:
+  email: false
+env:
+  global:
+  - GITHUB_TOKEN=FAKE_TEST_TOKEN
+  - NODE_ENV=test
