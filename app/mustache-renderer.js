@@ -17,19 +17,19 @@ class MustacheRenderer {
   }
 
   pageTemplate() {
-    return templates[this.name + '_page'];
+    return MustacheRenderer.templates[this.name + '_page'];
   }
 
   layoutTemplate() {
-    return templates.layout;
+    return MustacheRenderer.templates.layout;
   }
 
   pageView() {
-    return views[this.name];
+    return MustacheRenderer.views[this.name];
   }
 
   layoutView() {
-    return views.layout;
+    return MustacheRenderer.views.layout;
   }
 
   view() {
@@ -37,9 +37,11 @@ class MustacheRenderer {
   }
 
   partials() {
-    return Object.assign({}, templates, {page: this.pageTemplate()});
+    return Object.assign({}, MustacheRenderer.templates, {page: this.pageTemplate()});
   }
 }
 
+MustacheRenderer.templates = templates;
+MustacheRenderer.views = views;
 
 module.exports = MustacheRenderer;

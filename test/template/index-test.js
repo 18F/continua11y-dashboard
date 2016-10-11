@@ -19,6 +19,6 @@ describe('templates index', () => {
   });
 
   it('gathers nested templates', () => {
-    assert(templates.home.about.accesibility);
+    assert(templates.home.about);
   });
 });

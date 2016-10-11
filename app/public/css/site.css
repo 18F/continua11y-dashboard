@@ -10,7 +10,7 @@ h6 {
 
 html,
 body {
-  background-color: #f1f1f1; }
+  background-color: #aeb0b5; }
 
 @media screen and (max-width: 600px) {
   .mobile-hidden {
@@ -23,12 +23,13 @@ body {
 .continually-header {
   display: block;
   background-image: url(/images/spectrum.png);
+  background-size: cover;
   width: 100%;
   height: 70px;
   font-family: 'Dancing Script', cursive;
   font-size: 44px;
-  border-top: 2px solid #02bfe7;
-  border-bottom: 2px solid #02bfe7; }
+  border-top: 2px solid #aeb0b5;
+  border-bottom: 2px solid #aeb0b5; }
   .continually-header a {
     color: white;
     text-decoration: none; }
@@ -53,22 +54,17 @@ body {
     width: 68px;
     height: 68px;
     float: left;
-    background-color: #02bfe7; }
+    background-color: #aeb0b5; }
   .continually-header .tts-logo {
     width: 66px;
     height: 66px; }
 
-.menu-desktop {
-  height: 15px;
-  padding: 0 5px;
-  background-color: black; }
-
 .usa-disclaimer {
-  background-color: black;
-  color: #d6d7d9;
-  height: 28px;
+  background-color: #aeb0b5;
+  color: black;
+  height: 20px;
   font-size: 1.25rem;
-  padding: 5px 5px 5px 80px; }
+  padding: 3px 3px 3px 80px; }
   .usa-disclaimer .width-small-flag {
     margin-top: 2px;
     width: 32px;
@@ -79,11 +75,26 @@ body {
 h3.description {
   margin: 1rem; }
 
+.pull-up {
+  margin-top: 0; }
+
 .page {
-  background-color: white;
-  margin: 1rem;
   padding: 1rem;
-  min-height: 300px;
-  border: 2px solid #d6d7d9; }
-  .page h1 {
-    margin: 0; }
+  background-color: #f1f1f1;
+  min-height: 300px; }
+
+.panel {
+  border: 2px solid #aeb0b5;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  background-color: white; }
+  .panel h2, .panel h3, .panel h4 {
+    margin: 1rem 0 -0.5rem; }
+  .panel .badges {
+    margin-top: 2rem;
+    margin-bottom: -1rem; }
+    .panel .badges svg {
+      margin-right: 2rem; }
+
+.usa-grid-full {
+  max-width: none; }
