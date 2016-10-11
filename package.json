@@ -1,7 +1,7 @@
 {
   "name": "continu-a11y",
   "version": "1.0.0",
-  "description": "Riff on stvnrlly's continua11y, CI tool",
+  "description": "Riff on stvnrlly's continua11y, CI dashoard and tools",
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV=test node_modules/.bin/mocha --recursive --slow 1500",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/18F/continu-a11y.git"
+    "url": "git+https://github.com/18F/continua11y-due.git"
   },
   "keywords": [
     "accessibility",
@@ -21,9 +21,9 @@
   "author": "baccigalupi",
   "license": "CC0-1.0",
   "bugs": {
-    "url": "https://github.com/18F/continu-a11y/issues"
+    "url": "https://github.com/18F/continua11y-due/issues"
   },
-  "homepage": "https://github.com/18F/continu-a11y#readme",
+  "homepage": "https://github.com/18F/continua11y-due#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
     "cfenv": "^1.0.3",

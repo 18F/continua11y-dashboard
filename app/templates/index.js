@@ -10,7 +10,7 @@ function load(basePath, container) {
   basePath = basePath || path.resolve(__dirname);
   container = container || module.exports;
   loadFiles(fs.readdirSync(basePath), basePath, container);
-};
+}
 
 function loadFiles(paths, basePath, container) {
   loadFilesThisLevel(paths, basePath, container);
@@ -34,12 +34,11 @@ function loadFilesThisLevel(paths, basePath, container) {
 function loadNestedFiles(paths, basePath, container) {
   paths
     .filter((partialPath) => {
-      let fullPath = path.resolve(basePath, partialPath)
+      let fullPath = path.resolve(basePath, partialPath);
       return !fs.statSync(fullPath).isFile();
     })
     .forEach((partialPath) => {
-      let fullPath = path.resolve(basePath, partialPath)
-      goDeep(basePath, partialPath, container)
+      goDeep(basePath, partialPath, container);
     });
 }
 
