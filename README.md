@@ -1,6 +1,6 @@
 # Continua11y
 
-[![Build Status](https://travis-ci.org/18F/continua11y-due.svg?branch=master)](https://travis-ci.org/18F/continua11y-due) [![Code Climate](https://codeclimate.com/github/18F/continua11y-due/badges/gpa.svg)](https://codeclimate.com/github/18F/continua11y-due)
+[![Build Status](https://travis-ci.org/18F/continua11y-due.svg?branch=master)](https://travis-ci.org/18F/continua11y-due) [![Test Coverage](https://codeclimate.com/github/18F/continua11y-due/badges/coverage.svg)](https://codeclimate.com/github/18F/continua11y-due/coverage) [![Code Climate](https://codeclimate.com/github/18F/continua11y-due/badges/gpa.svg)](https://codeclimate.com/github/18F/continua11y-due)
 
 A dashboard for continuous integration of accessibility. It uses [pa11y](https://github.com/nature/pa11y), a web accessibility tool in an environment like CI to generate accessibility statistics for pages on a site. The dashboard also provides accessibility badges to install on your repo!
 
