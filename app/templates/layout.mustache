@@ -20,7 +20,7 @@
   <body class='{{controller_namespace}}'>
     <header role="banner">
       <div class="usa-disclaimer">
-        <div class="usa-disclaimer-official usa-grid">
+        <div class="usa-disclaimer-official">
           <div class='width-small-flag'>
             <img src="/images/us_flag_small.png" alt="U.S. flag">
           </div>
@@ -32,16 +32,22 @@
 
       <div class='continually-header'>
         <div class="usa-grid">
-          <div class='menu'>&nbsp;</div>
-          <a href="/" class="text-logo" alt='home'>Continua11y</div>
-        </a>
+          <div class='menu'>
+            <img src='/images/tts-square.png' alt='tts logo' class='tts-logo'>
+          </div>
+          <a href="/" class="text-logo" alt='home'>Continua11y</a>
+          <span class='description mobile-hidden'>{{site_description_small}}</span>
+        </div>
       </div>
 
       <div class='menu-desktop'>
         &nbsp;
       </div>
+      <h3 class='description desktop-hidden'>{{site_description_small}}</h3>
     </header>
 
-    {{> page}}
+    <div class='page'>
+      {{> page}}
+    </div>
   </body>
 </html>

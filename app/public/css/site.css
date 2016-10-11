@@ -12,14 +12,23 @@ html,
 body {
   background-color: #f1f1f1; }
 
+@media screen and (max-width: 600px) {
+  .mobile-hidden {
+    display: none !important; } }
+
+@media screen and (min-width: 600px) {
+  .desktop-hidden {
+    display: none !important; } }
+
 .continually-header {
   display: block;
   background-image: url(/images/spectrum.png);
   width: 100%;
   height: 70px;
   font-family: 'Dancing Script', cursive;
-  font-size: 50px;
-  border-top: 2px solid #02bfe7; }
+  font-size: 44px;
+  border-top: 2px solid #02bfe7;
+  border-bottom: 2px solid #02bfe7; }
   .continually-header a {
     color: white;
     text-decoration: none; }
@@ -27,28 +36,54 @@ body {
     margin: 0;
     padding: 0; }
   .continually-header .text-logo {
-    margin: 0 auto;
+    margin: 0.5rem auto 0;
     width: 200px;
     float: left;
-    padding: 0 3rem; }
+    padding: 0 1rem; }
+  .continually-header .description {
+    font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin-left: 2rem;
+    margin-top: 7px;
+    width: 300px;
+    display: inline-block; }
   .continually-header .menu {
     width: 68px;
     height: 68px;
     float: left;
     background-color: #02bfe7; }
+  .continually-header .tts-logo {
+    width: 66px;
+    height: 66px; }
 
 .menu-desktop {
-  min-height: 2px;
-  background-color: #323a45; }
+  height: 15px;
+  padding: 0 5px;
+  background-color: black; }
 
 .usa-disclaimer {
-  background-color: #323a45;
-  color: white;
+  background-color: black;
+  color: #d6d7d9;
+  height: 28px;
   font-size: 1.25rem;
-  padding: 0.5rem; }
+  padding: 5px 5px 5px 80px; }
   .usa-disclaimer .width-small-flag {
     margin-top: 2px;
     width: 32px;
     float: left; }
   .usa-disclaimer p {
+    margin: 0; }
+
+h3.description {
+  margin: 1rem; }
+
+.page {
+  background-color: white;
+  margin: 1rem;
+  padding: 1rem;
+  min-height: 300px;
+  border: 2px solid #d6d7d9; }
+  .page h1 {
     margin: 0; }
