@@ -8,7 +8,7 @@ const globals           = environmentSetup.globals();
 const path              = require('path');
 const appDir            = path.resolve(__dirname + '/app');
 const express           = require('express');
-const bodyParser        = require('body-parser');
+//const bodyParser        = require('body-parser');
 const enableCORS        = require('./app/config/enable-cors');
 const routes            = require(appDir + '/routes');
 

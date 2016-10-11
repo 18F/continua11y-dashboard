@@ -4,7 +4,11 @@
     <title>{{site_title}}</title>
     <meta charset="utf-8">
 
-    <!-- Put some js and css in here -->
+    <link rel='stylesheet' href='/css/uswds.css'>
+    <link rel='stylesheet' href='/css/site.css'>
+
+    <script src='/js/uswds.js'></script>
+    <script src='/js/site.js'></script>
 
     <link rel="icon" type="image/png" href="/images/favicon.png">
 
@@ -13,23 +17,31 @@
     <meta property="description"    content="{{site_description}}">
     <meta property="og:description" content="{{site_description}}">
   </head>
-
   <body class='{{controller_namespace}}'>
-    <!-- convert to uswds -->
-
-    <a href="/" class="homelink">
-      <div class="header text-center">Continua11y</div>
-    </a>
-
-    <div class="container">
-      <div class="col-sm-10 col-sm-offset-1">
-        <div class="row">
-          <div id="instructions" class="pull-right">
-            <a href="/instructions">setup guide</a>
+    <header role="banner">
+      <div class="usa-disclaimer">
+        <div class="usa-disclaimer-official usa-grid">
+          <div class='width-small-flag'>
+            <img src="/images/us_flag_small.png" alt="U.S. flag">
+          </div>
+          <div class='usa-width-five-sixths'>
+            <p>An official website of the United States government</p>
           </div>
         </div>
-        {{> page}}
       </div>
-    </div>
+
+      <div class='continually-header'>
+        <div class="usa-grid">
+          <div class='menu'>&nbsp;</div>
+          <a href="/" class="text-logo" alt='home'>Continua11y</div>
+        </a>
+      </div>
+
+      <div class='menu-desktop'>
+        &nbsp;
+      </div>
+    </header>
+
+    {{> page}}
   </body>
 </html>
