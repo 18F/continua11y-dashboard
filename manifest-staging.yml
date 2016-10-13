@@ -1,0 +1,8 @@
+applications:
+- name: continually-due
+  instances: 1
+  memory: 512M
+  disk_quota: 1024M
+  routes:
+  - route: continually-due.apps.cloud.gov
+  stack: cflinuxfs2

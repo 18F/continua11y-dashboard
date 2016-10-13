@@ -8,6 +8,18 @@ h5,
 h6 {
   font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
 
+h1 {
+  font-size: 3rem; }
+
+h2 {
+  font-size: 2.5rem; }
+
+h3 {
+  font-size: 1.85rem; }
+
+h4 {
+  font-size: 1.7rem; }
+
 html,
 body {
   background-color: #aeb0b5; }
@@ -22,8 +34,12 @@ body {
 
 .continually-header {
   display: block;
-  background-image: url(/images/spectrum.png);
-  background-size: cover;
+  background: #4c2c92;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #4c2c92, #981b1e, #AD6500, #2e8540, #205493, #4c2c92);
+  background: -o-linear-gradient(left, #4c2c92, #981b1e, #AD6500, #2e8540, #205493, #4c2c92);
+  background: -moz-linear-gradient(left, #4c2c92, #981b1e, #AD6500, #2e8540, #205493, #4c2c92);
+  background: linear-gradient(to right, #4c2c92, #981b1e, #AD6500, #2e8540, #205493, #4c2c92);
   width: 100%;
   height: 70px;
   font-family: 'Dancing Script', cursive;
