@@ -1,12 +1,182 @@
 @import url(https://fonts.googleapis.com/css?family=Dancing+Script);
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
+.line, .row, .last-unit {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  *overflow: visible;
+  *zoom: 1; }
+
+.unit {
+  float: left; }
+
+.unit-right {
+  float: right; }
+
+.size-1-1 {
+  width: 100%; }
+
+.size-1-2 {
+  width: 50%; }
+
+.size-1-3 {
+  width: 33.33333%; }
+
+.size-1-4 {
+  width: 25%; }
+
+.size-1-5 {
+  width: 20%; }
+
+.size-2-3 {
+  width: 66.66666%; }
+
+.size-2-5 {
+  width: 40%; }
+
+.size-3-4 {
+  width: 75%; }
+
+.size-3-5 {
+  width: 60%; }
+
+.size-4-5 {
+  width: 80%; }
+
+.last-unit {
+  float: none;
+  width: auto;
+  _position: relative;
+  _left: -3px;
+  _margin-right: -3px; }
+
+.inner {
+  padding: 1rem;
+  display: block;
+  overflow: hidden;
+  *overflow: visible;
+  *zoom: 1; }
+
+.spacer {
+  width: 1rem;
+  height: 1rem; }
+
+.m-hidden {
+  display: none; }
+
+.m-row {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  *overflow: visible;
+  *zoom: 1; }
+
+.right {
+  float: right; }
+
+@media screen and (min-width: 640px), screen and (max-height: 640px) and (orientation: landscape) {
+  .inner {
+    padding: 2rem; }
+  .spacer {
+    width: 2rem;
+    height: 2rem; }
+  .m-row {
+    float: left;
+    width: auto; }
+  .t-row {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    *overflow: visible;
+    *zoom: 1; }
+  .m-hidden {
+    display: block; }
+  .d-hidden {
+    display: block; }
+  .t-hidden {
+    display: none; }
+  .t-unit {
+    float: left; }
+  .t-unit-right {
+    float: right; }
+  .t-size-1-1 {
+    width: 100%; }
+  .t-size-1-2 {
+    width: 50%; }
+  .t-size-1-3 {
+    width: 33.33333%; }
+  .t-size-1-4 {
+    width: 25%; }
+  .t-size-1-5 {
+    width: 20%; }
+  .t-size-2-3 {
+    width: 66.66666%; }
+  .t-size-2-5 {
+    width: 40%; }
+  .t-size-3-4 {
+    width: 75%; }
+  .t-size-3-5 {
+    width: 60%; }
+  .t-size-4-5 {
+    width: 80%; }
+  .right {
+    float: right; } }
+
+@media screen and (min-width: 960px), screen and (min-height: 960px) and (orientation: landscape) {
+  .inner {
+    padding: 2.5rem; }
+  .spacer {
+    width: 2.5rem;
+    height: 2.5rem; }
+  .m-hidden {
+    display: block; }
+  .t-hidden {
+    display: block; }
+  .d-hidden {
+    display: none; }
+  .m-row {
+    float: left;
+    width: auto; }
+  .t-row {
+    float: left;
+    width: auto; }
+  .d-row {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    *overflow: visible;
+    *zoom: 1; }
+  .d-unit {
+    float: left; }
+  .d-unit-right {
+    float: right; }
+  .d-size-1-1 {
+    width: 100%; }
+  .d-size-1-2 {
+    width: 50%; }
+  .d-size-1-3 {
+    width: 33.33333%; }
+  .d-size-1-4 {
+    width: 25%; }
+  .d-size-1-5 {
+    width: 20%; }
+  .d-size-2-3 {
+    width: 66.66666%; }
+  .d-size-2-5 {
+    width: 40%; }
+  .d-size-3-4 {
+    width: 75%; }
+  .d-size-3-5 {
+    width: 60%; }
+  .d-size-4-5 {
+    width: 80%; }
+  .right {
+    float: right; } }
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  padding: 0;
+  margin: 0; }
 
 h1 {
   font-size: 3rem; }
@@ -22,95 +192,76 @@ h4 {
 
 html,
 body {
-  background-color: #aeb0b5; }
+  background-color: #112e51; }
 
-@media screen and (max-width: 600px) {
-  .mobile-hidden {
-    display: none !important; } }
+header .usa-pride-banner {
+  font-size: 1.5rem;
+  color: white;
+  background-color: #112e51; }
+  header .usa-pride-banner .inner {
+    padding: 0.5rem 1rem; }
+  header .usa-pride-banner .spacer {
+    width: 1.5rem;
+    height: 1.5rem; }
+  header .usa-pride-banner img {
+    margin-top: 6px; }
 
-@media screen and (min-width: 600px) {
-  .desktop-hidden {
-    display: none !important; } }
-
-.continually-header {
-  display: block;
+header .continually-header {
   background: #4c2c92;
   /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(left, #4c2c92, #981b1e, #AD6500, #2e8540, #205493, #4c2c92);
   background: -o-linear-gradient(left, #4c2c92, #981b1e, #AD6500, #2e8540, #205493, #4c2c92);
   background: -moz-linear-gradient(left, #4c2c92, #981b1e, #AD6500, #2e8540, #205493, #4c2c92);
   background: linear-gradient(to right, #4c2c92, #981b1e, #AD6500, #2e8540, #205493, #4c2c92);
-  width: 100%;
-  height: 70px;
   font-family: 'Dancing Script', cursive;
-  font-size: 44px;
-  border-top: 2px solid #aeb0b5;
-  border-bottom: 2px solid #aeb0b5; }
-  .continually-header a {
+  font-size: 44px; }
+  header .continually-header .inner {
+    padding: 1rem; }
+  header .continually-header a {
     color: white;
     text-decoration: none; }
-  .continually-header .usa-grid {
-    margin: 0;
-    padding: 0; }
-  .continually-header .text-logo {
-    margin: 0.5rem auto 0;
-    width: 200px;
-    float: left;
-    padding: 0 1rem; }
-  .continually-header .description {
-    font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-    font-size: 18px;
-    color: white;
-    font-weight: bold;
-    margin-left: 2rem;
-    margin-top: 7px;
-    width: 300px;
-    display: inline-block; }
-  .continually-header .menu {
-    width: 68px;
-    height: 68px;
-    float: left;
-    background-color: #aeb0b5; }
-  .continually-header .tts-logo {
-    width: 66px;
-    height: 66px; }
+  header .continually-header .site-description {
+    font-size: 2rem;
+    padding-top: 2rem; }
 
-.usa-disclaimer {
-  background-color: #aeb0b5;
-  color: black;
-  height: 20px;
-  font-size: 1.25rem;
-  padding: 3px 3px 3px 80px; }
-  .usa-disclaimer .width-small-flag {
-    margin-top: 2px;
-    width: 32px;
-    float: left; }
-  .usa-disclaimer p {
-    margin: 0; }
-
-h3.description {
-  margin: 1rem; }
-
-.pull-up {
-  margin-top: 0; }
+header .site-description {
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  color: white; }
 
 .page {
-  padding: 1rem;
-  background-color: #f1f1f1;
+  background-color: #d6d7d9;
   min-height: 300px; }
 
 .panel {
-  border: 2px solid #aeb0b5;
-  padding: 1rem;
   margin-bottom: 2rem;
   background-color: white; }
   .panel h2, .panel h3, .panel h4 {
-    margin: 1rem 0 -0.5rem; }
+    margin-top: 1.5rem; }
   .panel .badges {
-    margin-top: 2rem;
-    margin-bottom: -1rem; }
+    margin-top: 1rem; }
     .panel .badges svg {
       margin-right: 2rem; }
 
-.usa-grid-full {
-  max-width: none; }
+footer {
+  color: white; }
+  footer .our-logo {
+    width: 33.333333%;
+    max-width: 240px; }
+  footer .tts-logo {
+    width: 100%; }
+
+@media screen and (min-width: 640px), screen and (max-height: 640px) and (orientation: landscape) {
+  .usa-pride-banner .inner {
+    padding: 0.5rem 2.5rem; }
+  .continually-header {
+    font-size: 44px; }
+    .continually-header .inner {
+      padding: 1.5rem 2.5rem; } }
+
+@media screen and (min-width: 960px), screen and (min-height: 960px) and (orientation: landscape) {
+  .usa-pride-banner .inner {
+    padding: 0.5rem 2.5rem; }
+  .continually-header {
+    font-size: 44px; }
+    .continually-header .inner {
+      padding: 1.5rem 2.5rem; } }

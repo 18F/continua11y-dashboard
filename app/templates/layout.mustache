@@ -18,36 +18,58 @@
     <meta property="og:description" content="{{site_description}}">
   </head>
   <body class='{{controller_namespace}}'>
-    <header role="banner">
-      <div class="usa-disclaimer">
-        <div class="usa-disclaimer-official">
-          <div class='width-small-flag'>
+    <header role="banner" class='row'>
+      <div class='usa-pride-banner' class='row'>
+        <div class='inner'>
+          <div class='unit usa-flag-icon'>
             <img src="/images/us_flag_small.png" alt="U.S. flag">
           </div>
-          <div class='usa-width-five-sixths'>
-            <p>An official website of the United States government</p>
+          <div class='unit spacer'></div>
+          <p class='unit'>
+            An official website of the United States government
+          </p>
+        </div>
+      </div>
+      <div class='continually-header row'>
+        <div class='inner'>
+          <div class='unit'>
+            <a href="/">Continua11y</a>
+          </div>
+          <div class='unit spacer'></div>
+          <div class='last-unit m-hidden site-description'>
+            {{site_description_small}}
           </div>
         </div>
       </div>
-
-      <div class='continually-header'>
-        <div class="usa-grid">
-          <div class='menu'>
-            <img src='/images/tts-square.png' alt='tts logo' class='tts-logo'>
-          </div>
-          <a href="/" class="text-logo">Continua11y</a>
-          <span class='description mobile-hidden'>{{site_description_small}}</span>
-        </div>
+      <div class='m-row t-hidden d-hidden site-description'>
+        <p class='inner'>{{site_description_small}}</p>
       </div>
-      <p class='description desktop-hidden'>{{site_description_small}}</p>
     </header>
 
-    <a href="https://github.com/18f/continu-a11y" class='mobile-hidden'>
+    <a href="https://github.com/18f/continu-a11y" class='m-hidden'>
       <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png">
     </a>
 
-    <div class='page'>
-      {{> page}}
+    <div class='page row'>
+      <div class='inner'>
+        {{> page}}
+      </div>
     </div>
+
+    <footer class='row' role='banner'>
+      <div class='unit our-logo'>
+        <div class='inner'>
+          <img src='/images/tts-square.png' alt='tts logo' class='tts-logo'>
+        </div>
+      </div>
+      <div class='last-unit'>
+        <div class='inner'>
+          <div class='row spacer t-hidden m-hidden'></div>
+          <p>
+            Continua11y is a project of TTS, in the GSA. This is source code is dedicated to the public domain under a CC0 license.
+          </p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

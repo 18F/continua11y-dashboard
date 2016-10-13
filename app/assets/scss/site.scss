@@ -1,15 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Dancing+Script);
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);
 
+@import "grid";
 @import "variables";
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6, p {
   font-family: $font-sans;
+  padding: 0;
+  margin: 0;
 }
 
 h1 {
@@ -25,129 +23,122 @@ h4 {
   font-size: 1.7rem;
 }
 
-
 html,
 body {
-  background-color: $color-gray-light;
+  background-color: $color-primary-darkest;
 }
 
-@media screen and (max-width: 600px) {
-  .mobile-hidden { display: none !important; }
-}
-@media screen and (min-width: 600px) {
-  .desktop-hidden { display: none !important; }
-}
-
-.continually-header {
-  display: block;
-  background: $color-visited; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left,$color-visited,$color-secondary-darkest,#AD6500,$color-green,$color-primary-darker,$color-visited);
-  background: -o-linear-gradient(left,     $color-visited,$color-secondary-darkest,#AD6500,$color-green,$color-primary-darker,$color-visited);
-  background: -moz-linear-gradient(left,   $color-visited,$color-secondary-darkest,#AD6500,$color-green,$color-primary-darker,$color-visited);
-  background: linear-gradient(to right,    $color-visited,$color-secondary-darkest,#AD6500,$color-green,$color-primary-darker,$color-visited);
-
-  width: 100%;
-  height: 70px;
-  font-family: 'Dancing Script', cursive;
-  font-size: 44px;
-
-  a {
+header {
+  .usa-pride-banner {
+    font-size: 1.5rem;
     color: white;
-    text-decoration: none;
+    background-color: $color-primary-darkest;
+
+    .inner {
+      padding: 0.5rem 1rem;
+    }
+
+    .spacer {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    img { margin-top: 6px; }
   }
 
-  .usa-grid {
-    margin: 0;
-    padding: 0;
+  .continually-header {
+    background: $color-visited; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left,$color-visited,$color-secondary-darkest,#AD6500,$color-green,$color-primary-darker,$color-visited);
+    background: -o-linear-gradient(left,     $color-visited,$color-secondary-darkest,#AD6500,$color-green,$color-primary-darker,$color-visited);
+    background: -moz-linear-gradient(left,   $color-visited,$color-secondary-darkest,#AD6500,$color-green,$color-primary-darker,$color-visited);
+    background: linear-gradient(to right,    $color-visited,$color-secondary-darkest,#AD6500,$color-green,$color-primary-darker,$color-visited);
+
+    font-family: 'Dancing Script', cursive;
+    font-size: 44px;
+
+    .inner {
+      padding: 1rem;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .site-description {
+      font-size: 2rem;
+      padding-top: 2rem;
+    }
   }
 
-  .text-logo {
-    margin: 0.5rem auto 0;
-    width: 200px;
-    float: left;
-    padding: 0 1rem;
-  }
-
-  .description {
+  .site-description {
     font-family: $font-sans;
-    font-size: 18px;
     color: white;
-    font-weight: bold;
-    margin-left: 2rem;
-    margin-top: 7px;
-    width: 300px;
-    display: inline-block;
   }
-
-  .menu {
-    width: 68px;
-    height: 68px;
-    float: left;
-    background-color: $color-gray-light;
-  }
-
-  .tts-logo {
-    width: 66px;
-    height: 66px;
-  }
-
-  border-top: 2px solid $color-gray-light;
-  border-bottom: 2px solid $color-gray-light;
-}
-
-.usa-disclaimer {
-  background-color: $color-gray-light;
-  color: black;
-  height: 20px;
-
-  font-size: 1.25rem;
-
-  padding: 3px 3px 3px 80px;
-
-  .width-small-flag {
-    margin-top: 2px;
-    width: 32px;
-    float: left;
-  }
-
-  p { margin: 0; }
-}
-
-h3.description {
-  margin: 1rem;
-}
-
-.pull-up {
-  margin-top: 0;
 }
 
 .page {
-  padding: 1rem;
-  background-color: $color-gray-lightest;
+  background-color: $color-gray-lighter;
   min-height: 300px;
 }
 
 .panel {
-  border: 2px solid $color-gray-light;
-  padding: 1rem;
   margin-bottom: 2rem;
   background-color: white;
 
   h2, h3, h4 {
-    margin: 1rem 0 -0.5rem;
+    margin-top: 1.5rem;
   }
 
   .badges {
-    margin-top: 2rem;
-    margin-bottom: -1rem;
-
+    margin-top: 1rem;
     svg {
       margin-right: 2rem;
     }
   }
 }
 
-.usa-grid-full {
-  max-width: none;
+footer {
+  color: white;
+
+  .our-logo {
+    width: 33.333333%;
+    max-width: 240px;
+  }
+  .tts-logo {
+    width: 100%;
+  }
 }
 
+// tablet
+@media screen and (min-width: $tablet-break-point), screen and (max-height: $tablet-break-point) and (orientation: landscape) {
+  .usa-pride-banner {
+    .inner {
+      padding: 0.5rem 2.5rem;
+    }
+  }
+
+  .continually-header {
+    font-size: 44px;
+
+    .inner {
+      padding: 1.5rem 2.5rem;
+    }
+  }
+}
+
+// desktop
+@media screen and (min-width: $desktop-break-point), screen and (min-height: $desktop-break-point) and (orientation: landscape) {
+  .usa-pride-banner {
+    .inner {
+      padding: 0.5rem 2.5rem;
+    }
+  }
+  .continually-header {
+    font-size: 44px;
+
+    .inner {
+      padding: 1.5rem 2.5rem;
+    }
+  }
+}
