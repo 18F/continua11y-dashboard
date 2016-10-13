@@ -15,7 +15,7 @@ describe('Home page', () => {
   it('home page is successful', (done) => {
     browser.visit('/', () => {
       browser.assert.success();
-      browser.assert.text('h2', 'Make accessibility part of your build');
+      browser.assert.text('h1', 'Make accessibility part of your build');
       done();
     });
   });
