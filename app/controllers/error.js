@@ -2,7 +2,7 @@
 
 const MustacheRenderer = require('../mustache-renderer');
 
-module.exports = function notFound(error, req, res) {
+module.exports = function notFound(error, req, res, next) {
   // TODO: better logging
   console.log(error);
   res.status(500);
