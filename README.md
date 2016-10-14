@@ -8,11 +8,27 @@ A dashboard for continuous integration of accessibility. It uses [pa11y](https:/
 
 See [CONTRIBUTING](CONTRIBUTING.md) for additional information.
 
-## Development setup
+## Development work
 This is an express application written in node.js. Install all
 dependencies via:
 
     npm install
+
+This is a basic express app, so there are a couple of npm scripts to
+make reloading the application while working almost seamless.
+
+To reload the general application code while running a server use this
+script:
+
+    npm run dev
+
+Unfortunately, rerunning the sass is a different process. To compile the
+css takes an addition script:
+
+    npm run dev_sass
+
+Running both those scripts while developing can give a good reloadable
+environment.
 
 #### Environmental variables
 
