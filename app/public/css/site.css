@@ -228,25 +228,30 @@ header .continually-header {
   background: -moz-linear-gradient(left, #4c2c92, #981b1e, #AD6500, #2e8540, #205493, #4c2c92);
   background: linear-gradient(to right, #4c2c92, #981b1e, #AD6500, #2e8540, #205493, #4c2c92);
   font-family: 'Dancing Script', cursive;
-  font-size: 44px; }
+  font-size: 34px;
+  line-height: 30px; }
   header .continually-header .inner {
     padding: 1rem; }
   header .continually-header a {
     color: white;
     text-decoration: none; }
   header .continually-header .site-description {
-    font-size: 2rem;
-    padding-top: 1rem; }
+    padding-top: 0.75rem; }
 
 header .site-description {
+  font-size: 1.5rem;
   font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   color: white; }
+  header .site-description .inner {
+    padding: 0.5rem 1rem; }
 
 .page {
   background-color: white;
   min-height: 300px; }
   .page h2, .page h3, .page h4 {
     margin-top: 1.5rem; }
+  .page h1.value {
+    font-size: 4rem; }
   .page .badges {
     margin-top: 1rem; }
     .page .badges svg {
@@ -261,17 +266,9 @@ footer {
     width: 100%; }
 
 @media screen and (min-width: 640px), screen and (max-height: 640px) and (orientation: landscape) {
-  .usa-pride-banner .inner {
-    padding: 0.5rem 2.5rem; }
-  .continually-header {
-    font-size: 44px; }
-    .continually-header .inner {
-      padding: 1.5rem 2.5rem; } }
+  .m-t-inner-left {
+    padding-left: 1rem; } }
 
 @media screen and (min-width: 960px), screen and (min-height: 960px) and (orientation: landscape) {
-  .usa-pride-banner .inner {
-    padding: 0.5rem 2.5rem; }
-  .continually-header {
-    font-size: 44px; }
-    .continually-header .inner {
-      padding: 1.5rem 2.5rem; } }
+  .m-t-inner-left {
+    padding-left: 1rem; } }

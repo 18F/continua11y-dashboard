@@ -54,7 +54,8 @@ header {
     background: linear-gradient(to right,    $color-visited,$color-secondary-darkest,#AD6500,$color-green,$color-primary-darker,$color-visited);
 
     font-family: 'Dancing Script', cursive;
-    font-size: 44px;
+    font-size: 34px;
+    line-height: 30px;
 
     .inner {
       padding: 1rem;
@@ -66,14 +67,18 @@ header {
     }
 
     .site-description {
-      font-size: 2rem;
-      padding-top: 1rem;
+      padding-top: 0.75rem;
     }
   }
 
   .site-description {
+    font-size: 1.5rem;
     font-family: $font-sans;
     color: white;
+
+    .inner {
+      padding: 0.5rem 1rem;
+    }
   }
 }
 
@@ -83,6 +88,10 @@ header {
 
   h2, h3, h4 {
     margin-top: 1.5rem;
+  }
+
+  h1.value {
+    font-size: 4rem;
   }
 
   .badges {
@@ -107,33 +116,14 @@ footer {
 
 // tablet
 @media screen and (min-width: $tablet-break-point), screen and (max-height: $tablet-break-point) and (orientation: landscape) {
-  .usa-pride-banner {
-    .inner {
-      padding: 0.5rem 2.5rem;
-    }
-  }
-
-  .continually-header {
-    font-size: 44px;
-
-    .inner {
-      padding: 1.5rem 2.5rem;
-    }
+  .m-t-inner-left {
+    padding-left: 1rem;
   }
 }
 
 // desktop
 @media screen and (min-width: $desktop-break-point), screen and (min-height: $desktop-break-point) and (orientation: landscape) {
-  .usa-pride-banner {
-    .inner {
-      padding: 0.5rem 2.5rem;
-    }
-  }
-  .continually-header {
-    font-size: 44px;
-
-    .inner {
-      padding: 1.5rem 2.5rem;
-    }
+  .m-t-inner-left {
+    padding-left: 1rem;
   }
 }
