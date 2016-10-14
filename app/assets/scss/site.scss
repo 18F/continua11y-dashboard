@@ -67,7 +67,7 @@ header {
 
     .site-description {
       font-size: 2rem;
-      padding-top: 2rem;
+      padding-top: 1rem;
     }
   }
 
@@ -78,13 +78,8 @@ header {
 }
 
 .page {
-  background-color: $color-gray-lighter;
-  min-height: 300px;
-}
-
-.panel {
-  margin-bottom: 2rem;
   background-color: white;
+  min-height: 300px;
 
   h2, h3, h4 {
     margin-top: 1.5rem;

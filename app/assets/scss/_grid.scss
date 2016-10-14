@@ -33,6 +33,16 @@ $desktop-break-point: 960px;
   @include line;
 }
 
+.inner-top {
+  padding-top: $spacing;
+  @include line;
+}
+
+.inner-bottom {
+  padding-bottom: $spacing;
+  @include line;
+}
+
 .spacer {
   width: $spacing;
   height: $spacing;
