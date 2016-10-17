@@ -1,16 +1,17 @@
 'use strict';
 
-const Browser = require('zombie');
-const app     = require('../../../app');
+const Browser     = require('zombie');
+const testServer  = require('./test-server');
 
 module.exports.start = function start(callback) {
-  let port = process.env.PORT || 3456;
   let browser;
-
-  app.listen(port, () => {
-    Browser.localhost('example.com', port);
+  testServer.start((port) => {
+    Browser.localhost('example.gov', port);
     browser = new Browser();
+    browser.port = port;
     callback(browser);
   });
 };
+
+module.exports.stop = testServer.stop;
 

@@ -12,6 +12,10 @@ describe('Public pages', () => {
     });
   });
 
+  after((done) => {
+    server.stop(done);
+  });
+
   it('home page is successful', (done) => {
     browser.visit('/', () => {
       browser.assert.success();
