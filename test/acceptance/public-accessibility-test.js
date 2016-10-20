@@ -1,18 +1,18 @@
 'use strict';
 
-const server            = require('./support/test-server');
-const acessibility      = require('./support/test-accessibility');
-const pa11y             = require('pa11y');
-const assert            = require('assert');
+const server                 = require('./support/test-server');
+const contintua11yAcceptance = require('continua11y-acceptance');
+const config                 = require('./support/continua11y-acceptance-config.json');
 
 describe('Accessibility of public pages', function() {
   this.timeout(1000 * 10);
 
-  let port;
+  let mobileTest, desktopTest;
 
   before((done) => {
-    server.start((p) => {
-      port = p;
+    server.start(() => {
+      mobileTest  = contintua11yAcceptance(config).test(server, 'mobile');
+      desktopTest = contintua11yAcceptance(config).test(server, 'desktop');
       done();
     });
   });
@@ -22,14 +22,16 @@ describe('Accessibility of public pages', function() {
   });
 
   it('has an accessible home page in desktop view', (done) => {
-    acessibility.testDesktop(server, '/', (results) => {
+    mobileTest.run('/', (err, results) => {
+      if (err) { return done(err); }
       results.assertNoErrors();
       done();
     });
   });
 
   it('has an accessible home page in mobile view', (done) => {
-    acessibility.testMobile(server, '/', (results) => {
+    desktopTest.run('/', (err, results) => {
+      if (err) { return done(err); }
       results.assertNoErrors();
       done();
     });
