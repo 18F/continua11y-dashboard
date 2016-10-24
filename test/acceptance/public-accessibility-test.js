@@ -1,8 +1,11 @@
 'use strict';
 
-const server                 = require('./support/test-server');
-const contintua11yAcceptance = require('continua11y-acceptance');
-const config                 = require('./support/continua11y-acceptance-config.json');
+const async                   = require('async');
+const contintua11yAcceptance  = require('continua11y-acceptance');
+
+const server                  = require('./support/test-server');
+const config                  = require('./support/continua11y-acceptance-config.json');
+const accessibilityAcceptance = contintua11yAcceptance(config);
 
 describe('Accessibility of public pages', function() {
   this.timeout(1000 * 10);
@@ -11,9 +14,9 @@ describe('Accessibility of public pages', function() {
 
   before((done) => {
     server.start(() => {
-      mobileTest  = contintua11yAcceptance(config).test(server, 'mobile');
-      desktopTest = contintua11yAcceptance(config).test(server, 'desktop');
-      done();
+      mobileTest  = accessibilityAcceptance.test(server, 'mobile');
+      desktopTest = accessibilityAcceptance.test(server, 'desktop');
+      accessibilityAcceptance.clearReport(done);
     });
   });
 
@@ -21,19 +24,13 @@ describe('Accessibility of public pages', function() {
     server.stop(done);
   });
 
-  it('has an accessible home page in desktop view', (done) => {
-    mobileTest.run('/', (err, results) => {
-      if (err) { return done(err); }
-      results.assertNoErrors();
-      done();
-    });
-  });
-
-  it('has an accessible home page in mobile view', (done) => {
-    desktopTest.run('/', (err, results) => {
-      if (err) { return done(err); }
-      results.assertNoErrors();
-      done();
-    });
+  it('has an accessible home page in all views', (done) => {
+    async.each([mobileTest, desktopTest], (test, next) => {
+      test.run('/', (err, results) => {
+        if (err) { return next(err); }
+        results.assertNoErrors();
+        next();
+      });
+    }, done);
   });
 });
