@@ -48,11 +48,21 @@ environmental variables are present.
 Database is postgres and you need to create these databases outside the
 application scripts:
 
-    createdb continu_a11y_test # for test env
-    createdb continu_a11y-development # for test development
+    createdb continua11y_dashboard_test # for test env
+    createdb continua11y_dashboard_development # for development
 
-Other database configuration options can be found in
-`config/database.json`.
+The database sql abstraction is provided by the module `knex`, and other database configuration options can be found in the `./knexfile.js`.
+
+Migrations are also handled by this module.
+
+Creating a new migration can be done via:
+
+    node_modules/.bin/knex migrate:make ___migration_name_here___
+
+Migrate the databases via
+
+    NODE_ENV=development node_modules/.bin/knex migrate:latest
+    NODE_ENV=test        node_modules/.bin/knex migrate:latest
 
 #### Testing
 
