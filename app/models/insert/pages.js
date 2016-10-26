@@ -1,13 +1,13 @@
 'use strict';
 
-const InsertRecord = require('../insert-record');
+const InsertRecords = require('../insert-records');
 
-class Page extends InsertRecord {
-  attributes() {
+class Page extends InsertRecords {
+  attributes(data) {
     return {
-      report_id: this.data.report_id,
-      path: this.data.path,
-      size: this.data.size
+      report_id: data.report_id,
+      path: data.path,
+      size: data.size
     };
   }
 
