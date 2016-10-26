@@ -1,0 +1,340 @@
+{
+  "repo": "continua11y-dashboard",
+  "owner": "18F",
+  "branch": "master",
+  "commit": "d7078e388796502e49df1bac88d52a29cbf4091b",
+  "pull_request": false,
+  "tests": [{
+    "path": "/",
+    "size": "desktop",
+    "results": {
+      "errors": [],
+      "warnings": [{
+        "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G145.BgImage",
+        "context": "<a href=\"/\">Continua11y</a>",
+        "message": "This element's text is placed on a background image. Ensure the contrast ratio between the text and all covered parts of the image are at least 3:1.",
+        "selector": "html > body > header > div:nth-child(2) > div > div:nth-child(1) > a",
+        "type": "warning",
+        "typeCode": 2
+      }, {
+        "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.BgImage",
+        "context": "<div class=\"last-unit m-hidden site-description\">\n            A continuous integ...</div>",
+        "message": "This element's text is placed on a background image. Ensure the contrast ratio between the text and all covered parts of the image are at least 4.5:1.",
+        "selector": "html > body > header > div:nth-child(2) > div > div:nth-child(3)",
+        "type": "warning",
+        "typeCode": 2
+      }, {
+        "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.B",
+        "context": "<b><a href=\"https://www.section508...</b>",
+        "message": "Semantic markup should be used to mark emphasised or special text so that it can be programmatically determined.",
+        "selector": "html > body > div > div > div:nth-child(2) > div > ul:nth-child(4) > li:nth-child(1) > b",
+        "type": "warning",
+        "typeCode": 2
+      }, {
+        "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.B",
+        "context": "<b><a href=\"https://en.wikipedia.o...</b>",
+        "message": "Semantic markup should be used to mark emphasised or special text so that it can be programmatically determined.",
+        "selector": "html > body > div > div > div:nth-child(2) > div > ul:nth-child(4) > li:nth-child(2) > b",
+        "type": "warning",
+        "typeCode": 2
+      }, {
+        "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.B",
+        "context": "<b><a href=\"https://www.squizlabs....</b>",
+        "message": "Semantic markup should be used to mark emphasised or special text so that it can be programmatically determined.",
+        "selector": "html > body > div > div > div:nth-child(2) > div > ul:nth-child(7) > li:nth-child(1) > b",
+        "type": "warning",
+        "typeCode": 2
+      }, {
+        "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.B",
+        "context": "<b><a href=\"https://github.com/pa1...</b>",
+        "message": "Semantic markup should be used to mark emphasised or special text so that it can be programmatically determined.",
+        "selector": "html > body > div > div > div:nth-child(2) > div > ul:nth-child(7) > li:nth-child(2) > b",
+        "type": "warning",
+        "typeCode": 2
+      }],
+      "notices": [{
+        "code": "WCAG2AA.Principle2.Guideline2_4.2_4_2.H25.2",
+        "context": "<title>Continua11y - A continuous inte...</title>",
+        "message": "Check that the title element describes the document.",
+        "selector": "html > head > title",
+        "type": "notice",
+        "typeCode": 3
+      }, {
+        "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.G94.Image",
+        "context": "<img src=\"/images/us_flag_small.png\" alt=\"U.S. flag\">",
+        "message": "Ensure that the img element's alt text serves the same purpose and presents the same information as the image.",
+        "selector": "html > body > header > div:nth-child(1) > div > div:nth-child(1) > img",
+        "type": "notice",
+        "typeCode": 3
+      }, {
+        "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.G73,G74",
+        "context": "<img src=\"/images/us_flag_small.png\" alt=\"U.S. flag\">",
+        "message": "If this image cannot be fully described in a short text alternative, ensure a long text alternative is also available, such as in the body text or through a link.",
+        "selector": "html > body > header > div:nth-child(1) > div > div:nth-child(1) > img",
+        "type": "notice",
+        "typeCode": 3
+      }, {
+        "code": "WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81",
+        "context": "<a href=\"/\">Continua11y</a>",
+        "message": "Check that the link text combined with programmatically determined link context identifies the purpose of the link.",
+        "selector": "html > body > header > div:nth-child(2) > div > div:nth-child(1) > a",
+        "type": "notice",
+        "typeCode": 3
+      }, {
+        "code": "WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81",
+        "context": "<a href=\"https://github.com/18f/continua11y-due\" class=\"m-hidden\">\n      <img style=\"position: ab...</a>",
+        "message": "Check that the link text combined with programmatically determined link context identifies the purpose of the link.",
+        "selector": "html > body > a",
+        "type": "notice",
+        "typeCode": 3
+      }, {
+        "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.G94.Image",
+        "context": "<img style=\"position: absolute; top: 0; right: 0; border: 0;\" src=\"https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7...",
+        "message": "Ensure that the img element's alt text serves the same purpose and presents the same information as the image.",
+        "selector": "html > body > a > img",
+        "type": "notice",
+        "typeCode": 3
+      }, {
+        "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.G73,G74",
+        "context": "<img style=\"position: absolute; top: 0; right: 0; border: 0;\" src=\"https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7...",
+        "message": "If this image cannot be fully described in a short text alternative, ensure a long text alternative is also available, such as in the body text or through a link.",
+        "selector": "html > body > a > img",
+        "type": "notice",
+        "typeCode": 3
+      }, {
+        "code": "WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81",
+        "context": "<a class=\"usa-button\" href=\"/setup\">Get started</a>",
+        "message": "Check that the link text combined with programmatically determined link context identifies the purpose of the link.",
+        "selector": "html > body > div > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(10) > a",
+        "type": "notice",
+        "typeCode": 3
+      }, {
+        "code": "WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81",
+        "context": "<a href=\"https://www.section508.gov\">Section 508</a>",
+        "message": "Check that the link text combined with programmatically determined link context identifies the purpose of the link.",
+        "selector": "html > body > div > div > div:nth-child(2) > div > ul:nth-child(4) > li:nth-child(1) > b > a",
+        "type": "notice",
+        "typeCode": 3
+      }, {
+        "code": "WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81",
+        "context": "<a href=\"https://en.wikipedia.org/wiki/Web_Content_Accessibility_Guidelines\">WCAG</a>",
+        "message": "Check that the link text combined with programmatically determined link context identifies the purpose of the link.",
+        "selector": "html > body > div > div > div:nth-child(2) > div > ul:nth-child(4) > li:nth-child(2) > b > a",
+        "type": "notice",
+        "typeCode": 3
+      }, {
+        "code": "WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81",
+        "context": "<a href=\"https://en.wikipedia.org/wiki/Web_Accessibility_Initiative\">WAI</a>",
+        "message": "Check that the link text combined with programmatically determined link context identifies the purpose of the link.",
+        "selector": "html > body > div > div > div:nth-child(2) > div > ul:nth-child(4) > li:nth-child(2) > a:nth-child(2)",
+        "type": "notice",
+        "typeCode": 3
+      }, {
+        "code": "WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81",
+        "context": "<a href=\"https://en.wikipedia.org/wiki/World_Wide_Web_Consortium\">W3C</a>",
+        "message": "Check that the link text combined with programmatically determined link context identifies the purpose of the link.",
+        "selector": "html > body > div > div > div:nth-child(2) > div > ul:nth-child(4) > li:nth-child(2) > a:nth-child(3)",
+        "type": "notice",
+        "typeCode": 3
+      }, {
+        "code": "WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81",
+        "context": "<a href=\"https://www.w3.org/WAI/WCAG2AA-Conformance\">WCAG2AA</a>",
+        "message": "Check that the link text combined with programmatically determined link context identifies the purpose of the link.",
+        "selector": "html > body > div > div > div:nth-child(2) > div > ul:nth-child(4) > li:nth-child(2) > a:nth-child(4)",
+        "type": "notice",
+        "typeCode": 3
+      }, {
+        "code": "WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81",
+        "context": "<a href=\"https://www.squizlabs.com/general/html-codesniffer\">HTML_CodeSniffer</a>",
+        "message": "Check that the link text combined with programmatically determined link context identifies the purpose of the link.",
+        "selector": "html > body > div > div > div:nth-child(2) > div > ul:nth-child(7) > li:nth-child(1) > b > a",
+        "type": "notice",
+        "typeCode": 3
+      }, {
+        "code": "WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81",
+        "context": "<a href=\"https://github.com/pa11y/pa11y\">pa11y</a>",
+        "message": "Check that the link text combined with programmatically determined link context identifies the purpose of the link.",
+        "selector": "html > body > div > div > div:nth-child(2) > div > ul:nth-child(7) > li:nth-child(2) > b > a",
+        "type": "notice",
+        "typeCode": 3
+      }, {
+        "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.G94.Image",
+        "context": "<img src=\"/images/tts-square.png\" alt=\"tts logo\" class=\"tts-logo\">",
+        "message": "Ensure that the img element's alt text serves the same purpose and presents the same information as the image.",
+        "selector": "html > body > footer > div:nth-child(1) > div > img",
+        "type": "notice",
+        "typeCode": 3
+      }, {
+        "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.G73,G74",
+        "context": "<img src=\"/images/tts-square.png\" alt=\"tts logo\" class=\"tts-logo\">",
+        "message": "If this image cannot be fully described in a short text alternative, ensure a long text alternative is also available, such as in the body text or through a link.",
+        "selector": "html > body > footer > div:nth-child(1) > div > img",
+        "type": "notice",
+        "typeCode": 3
+      }]
+    }
+  }, {
+    "path": "/",
+    "size": "mobile",
+    "results": {
+      "errors": [],
+      "warnings": [{
+        "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G145.BgImage",
+        "context": "<a href=\"/\">Continua11y</a>",
+        "message": "This element's text is placed on a background image. Ensure the contrast ratio between the text and all covered parts of the image are at least 3:1.",
+        "selector": "html > body > header > div:nth-child(2) > div > div:nth-child(1) > a",
+        "type": "warning",
+        "typeCode": 2
+      }, {
+        "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.B",
+        "context": "<b><a href=\"https://www.section508...</b>",
+        "message": "Semantic markup should be used to mark emphasised or special text so that it can be programmatically determined.",
+        "selector": "html > body > div > div > div:nth-child(2) > div > ul:nth-child(4) > li:nth-child(1) > b",
+        "type": "warning",
+        "typeCode": 2
+      }, {
+        "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.B",
+        "context": "<b><a href=\"https://en.wikipedia.o...</b>",
+        "message": "Semantic markup should be used to mark emphasised or special text so that it can be programmatically determined.",
+        "selector": "html > body > div > div > div:nth-child(2) > div > ul:nth-child(4) > li:nth-child(2) > b",
+        "type": "warning",
+        "typeCode": 2
+      }, {
+        "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.B",
+        "context": "<b><a href=\"https://www.squizlabs....</b>",
+        "message": "Semantic markup should be used to mark emphasised or special text so that it can be programmatically determined.",
+        "selector": "html > body > div > div > div:nth-child(2) > div > ul:nth-child(7) > li:nth-child(1) > b",
+        "type": "warning",
+        "typeCode": 2
+      }, {
+        "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.B",
+        "context": "<b><a href=\"https://github.com/pa1...</b>",
+        "message": "Semantic markup should be used to mark emphasised or special text so that it can be programmatically determined.",
+        "selector": "html > body > div > div > div:nth-child(2) > div > ul:nth-child(7) > li:nth-child(2) > b",
+        "type": "warning",
+        "typeCode": 2
+      }],
+      "notices": [{
+        "code": "WCAG2AA.Principle2.Guideline2_4.2_4_2.H25.2",
+        "context": "<title>Continua11y - A continuous inte...</title>",
+        "message": "Check that the title element describes the document.",
+        "selector": "html > head > title",
+        "type": "notice",
+        "typeCode": 3
+      }, {
+        "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.G94.Image",
+        "context": "<img src=\"/images/us_flag_small.png\" alt=\"U.S. flag\">",
+        "message": "Ensure that the img element's alt text serves the same purpose and presents the same information as the image.",
+        "selector": "html > body > header > div:nth-child(1) > div > div:nth-child(1) > img",
+        "type": "notice",
+        "typeCode": 3
+      }, {
+        "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.G73,G74",
+        "context": "<img src=\"/images/us_flag_small.png\" alt=\"U.S. flag\">",
+        "message": "If this image cannot be fully described in a short text alternative, ensure a long text alternative is also available, such as in the body text or through a link.",
+        "selector": "html > body > header > div:nth-child(1) > div > div:nth-child(1) > img",
+        "type": "notice",
+        "typeCode": 3
+      }, {
+        "code": "WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81",
+        "context": "<a href=\"/\">Continua11y</a>",
+        "message": "Check that the link text combined with programmatically determined link context identifies the purpose of the link.",
+        "selector": "html > body > header > div:nth-child(2) > div > div:nth-child(1) > a",
+        "type": "notice",
+        "typeCode": 3
+      }, {
+        "code": "WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81",
+        "context": "<a href=\"https://github.com/18f/continua11y-due\" class=\"m-hidden\">\n      <img style=\"position: ab...</a>",
+        "message": "Check that the link text combined with programmatically determined link context identifies the purpose of the link.",
+        "selector": "html > body > a",
+        "type": "notice",
+        "typeCode": 3
+      }, {
+        "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.G94.Image",
+        "context": "<img style=\"position: absolute; top: 0; right: 0; border: 0;\" src=\"https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7...",
+        "message": "Ensure that the img element's alt text serves the same purpose and presents the same information as the image.",
+        "selector": "html > body > a > img",
+        "type": "notice",
+        "typeCode": 3
+      }, {
+        "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.G73,G74",
+        "context": "<img style=\"position: absolute; top: 0; right: 0; border: 0;\" src=\"https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7...",
+        "message": "If this image cannot be fully described in a short text alternative, ensure a long text alternative is also available, such as in the body text or through a link.",
+        "selector": "html > body > a > img",
+        "type": "notice",
+        "typeCode": 3
+      }, {
+        "code": "WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81",
+        "context": "<a class=\"usa-button\" href=\"/setup\">Get started</a>",
+        "message": "Check that the link text combined with programmatically determined link context identifies the purpose of the link.",
+        "selector": "html > body > div > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(10) > a",
+        "type": "notice",
+        "typeCode": 3
+      }, {
+        "code": "WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81",
+        "context": "<a href=\"https://www.section508.gov\">Section 508</a>",
+        "message": "Check that the link text combined with programmatically determined link context identifies the purpose of the link.",
+        "selector": "html > body > div > div > div:nth-child(2) > div > ul:nth-child(4) > li:nth-child(1) > b > a",
+        "type": "notice",
+        "typeCode": 3
+      }, {
+        "code": "WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81",
+        "context": "<a href=\"https://en.wikipedia.org/wiki/Web_Content_Accessibility_Guidelines\">WCAG</a>",
+        "message": "Check that the link text combined with programmatically determined link context identifies the purpose of the link.",
+        "selector": "html > body > div > div > div:nth-child(2) > div > ul:nth-child(4) > li:nth-child(2) > b > a",
+        "type": "notice",
+        "typeCode": 3
+      }, {
+        "code": "WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81",
+        "context": "<a href=\"https://en.wikipedia.org/wiki/Web_Accessibility_Initiative\">WAI</a>",
+        "message": "Check that the link text combined with programmatically determined link context identifies the purpose of the link.",
+        "selector": "html > body > div > div > div:nth-child(2) > div > ul:nth-child(4) > li:nth-child(2) > a:nth-child(2)",
+        "type": "notice",
+        "typeCode": 3
+      }, {
+        "code": "WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81",
+        "context": "<a href=\"https://en.wikipedia.org/wiki/World_Wide_Web_Consortium\">W3C</a>",
+        "message": "Check that the link text combined with programmatically determined link context identifies the purpose of the link.",
+        "selector": "html > body > div > div > div:nth-child(2) > div > ul:nth-child(4) > li:nth-child(2) > a:nth-child(3)",
+        "type": "notice",
+        "typeCode": 3
+      }, {
+        "code": "WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81",
+        "context": "<a href=\"https://www.w3.org/WAI/WCAG2AA-Conformance\">WCAG2AA</a>",
+        "message": "Check that the link text combined with programmatically determined link context identifies the purpose of the link.",
+        "selector": "html > body > div > div > div:nth-child(2) > div > ul:nth-child(4) > li:nth-child(2) > a:nth-child(4)",
+        "type": "notice",
+        "typeCode": 3
+      }, {
+        "code": "WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81",
+        "context": "<a href=\"https://www.squizlabs.com/general/html-codesniffer\">HTML_CodeSniffer</a>",
+        "message": "Check that the link text combined with programmatically determined link context identifies the purpose of the link.",
+        "selector": "html > body > div > div > div:nth-child(2) > div > ul:nth-child(7) > li:nth-child(1) > b > a",
+        "type": "notice",
+        "typeCode": 3
+      }, {
+        "code": "WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81",
+        "context": "<a href=\"https://github.com/pa11y/pa11y\">pa11y</a>",
+        "message": "Check that the link text combined with programmatically determined link context identifies the purpose of the link.",
+        "selector": "html > body > div > div > div:nth-child(2) > div > ul:nth-child(7) > li:nth-child(2) > b > a",
+        "type": "notice",
+        "typeCode": 3
+      }, {
+        "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.G94.Image",
+        "context": "<img src=\"/images/tts-square.png\" alt=\"tts logo\" class=\"tts-logo\">",
+        "message": "Ensure that the img element's alt text serves the same purpose and presents the same information as the image.",
+        "selector": "html > body > footer > div:nth-child(1) > div > img",
+        "type": "notice",
+        "typeCode": 3
+      }, {
+        "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.G73,G74",
+        "context": "<img src=\"/images/tts-square.png\" alt=\"tts logo\" class=\"tts-logo\">",
+        "message": "If this image cannot be fully described in a short text alternative, ensure a long text alternative is also available, such as in the body text or through a link.",
+        "selector": "html > body > footer > div:nth-child(1) > div > img",
+        "type": "notice",
+        "typeCode": 3
+      }]
+    }
+  }],
+  "timestamp": 1477353645451
+}

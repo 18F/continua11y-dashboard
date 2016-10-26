@@ -7,6 +7,7 @@ exports.up = function(knex, Promise) {
       table.string('owner');
       table.string('name');
       table.timestamps();
+      table.unique(['owner', 'name']);
     })
   ]);
 };

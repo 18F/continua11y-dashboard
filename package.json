@@ -28,20 +28,24 @@
   "homepage": "https://github.com/18F/continua11y-dashboard#readme",
   "dependencies": {
     "async": "^2.1.2",
+    "bluebird": "^3.4.6",
     "body-parser": "^1.15.2",
     "cfenv": "^1.0.3",
     "dotenv": "^2.0.0",
     "express": "^4.14.0",
+    "express-winston": "^2.0.0",
     "knex": "^0.12.2",
     "lodash": "^4.16.4",
     "mustache": "^2.2.1",
     "node-sass": "^3.10.1",
     "pg": "^6.1.0",
-    "uswds": "^0.13.1"
+    "uswds": "^0.13.1",
+    "winston": "^2.2.0"
   },
   "devDependencies": {
     "codeclimate-test-reporter": "^0.4.0",
     "continua11y-acceptance": "^1.1.1",
+    "continua11y-ci-reporter": "^1.0.0",
     "istanbul": "^0.4.5",
     "jshint": "^2.9.3",
     "mocha": "^3.1.0",

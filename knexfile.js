@@ -5,7 +5,7 @@ if (!env || env === 'undefined') {
   env = 'development';
 }
 
-let database = 'continua11y_dashboard_' + env;
+let database = 'continua11y-dashboard-' + env;
 let username = process.env.DATABASE_USER_NAME;
 let password = process.env.DATABASE_PASSWORD;
 
