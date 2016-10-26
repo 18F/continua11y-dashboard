@@ -5,15 +5,15 @@ cache:
   directories:
   - node_modules
 sudo: false
-addons:
-  postgresql: "9.5.4"
 before_script:
-- createdb continua11y-dashboard-test
+- psql -c 'create database continua11y-dashboard-test;' -U postgres
 script: npm run test_coverage
 after_script:
 - codeclimate-test-reporter < coverage/lcov.info
 notifications:
   email: false
+services:
+  - postgresql
 env:
   global:
   - DATABASE_USER_NAME=postgres
