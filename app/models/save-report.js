@@ -2,16 +2,18 @@
 
 const UpsertRepsitory      = require('./upsert-repository');
 const InsertReport         = require('./insert/report');
+const InsertPages          = require('./insert/pages');
 
 class SaveReport {
   constructor(data) {
     this.data = Object.assign({}, data);
-    this.savedData = {};
+    this.savedData = {pages: []};
   }
 
   perform() {
     return this.upsertRepository()
-      .then(() => { return this.insertReport(); });
+      .then(() => { return this.insertReport(); })
+      .then(() => { return this.insertPages(); });
   }
 
   upsertRepository() {
@@ -25,6 +27,20 @@ class SaveReport {
       .perform()
       .then((results) => {
         this.savedData.report = results[0];
+        return this.savedData;
+      });
+  }
+
+  insertPages() {
+    let pageData = this.data.tests.map((item) => {
+      item.report_id = this.savedData.report.id;
+      return item;
+    });
+
+    return new InsertPages(pageData)
+      .perform()
+      .then((results) => {
+        this.savedData.pages = results;
         return this.savedData;
       });
   }

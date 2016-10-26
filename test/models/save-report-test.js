@@ -50,7 +50,7 @@ describe('SaveReport', function() {
         .catch(done);
     });
 
-    xit('saves each page', (done) => {
+    it('saves each page', (done) => {
       creator
         .perform()
         .then((savedData) => {
