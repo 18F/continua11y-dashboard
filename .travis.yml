@@ -7,6 +7,7 @@ cache:
 sudo: false
 before_script:
 - psql -c 'create database continua11y_dashboard_test;' -U postgres
+- knex migrate:latest
 script: npm run test_coverage
 after_script:
 - codeclimate-test-reporter < coverage/lcov.info
