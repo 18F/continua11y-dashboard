@@ -8,7 +8,7 @@ sudo: false
 addons:
   postgresql: "9.5.4"
 before_script:
-- psql -c 'create database continua11y-dashboard-test;' -U postgres
+- createdb continua11y-dashboard-test
 script: npm run test_coverage
 after_script:
 - codeclimate-test-reporter < coverage/lcov.info
@@ -16,6 +16,7 @@ notifications:
   email: false
 env:
   global:
+  - DATABASE_USER_NAME=postgres
   - GITHUB_TOKEN=FAKE_TEST_TOKEN
   - NODE_ENV=test
   - CONTINUA11Y_URL=https://continua11y-staging.apps.cloud.gov
