@@ -11,7 +11,8 @@ class SaveReport {
   }
 
   perform() {
-    return this.upsertRepository()
+    return this
+      .upsertRepository()
       .then(() => { return this.insertReport(); })
       .then(() => { return this.insertPages(); });
   }
@@ -37,12 +38,7 @@ class SaveReport {
       return item;
     });
 
-    return new InsertPages(pageData)
-      .perform()
-      .then((results) => {
-        this.savedData.pages = results;
-        return this.savedData;
-      });
+    return new InsertPages(pageData, this.savedData).performSavingIssues();
   }
 }
 

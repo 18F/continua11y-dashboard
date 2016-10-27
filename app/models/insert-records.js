@@ -4,8 +4,9 @@ const db                   = require('../config/db-connection');
 const ValidateDataPresence = require('./validate-data-presence');
 
 class InsertRecords {
-  constructor(data) {
+  constructor(data, savedData) {
     this.data = data;
+    this.savedData = savedData;
   }
 
   perform() {

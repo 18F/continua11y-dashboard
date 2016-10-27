@@ -17,7 +17,7 @@ describe('SaveReport', function() {
     db('repositories').del().then(() => {
       db('reports').del().then(() => {
         db('pages').del().then(() => {
-          db('issues').del().then(done);
+          db('issues').del().then(() => { done(); });
         });
       });
     });
@@ -60,6 +60,26 @@ describe('SaveReport', function() {
           assert.equal(pages[0].size, 'desktop');
           assert.equal(pages[1].path, '/');
           assert.equal(pages[1].size, 'mobile');
+          done();
+        })
+        .catch(done);
+    });
+
+    it('saves issues per page', (done) => {
+      creator
+        .perform()
+        .then((savedData) => {
+          let pageIds = savedData.pages.map((page) => { return page.id; });
+          let issues = savedData.issues;
+
+          let filteredIssues = issues.filter((issue) => { return issue.page_id === pageIds[0]; });
+          assert.equal(filteredIssues.length, 23);
+
+          filteredIssues = issues.filter((issue) => { return issue.page_id === pageIds[1]; });
+          assert.equal(filteredIssues.length, 22);
+
+          assert.equal(issues.length, 45);
+
           done();
         })
         .catch(done);
