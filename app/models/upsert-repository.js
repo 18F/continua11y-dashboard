@@ -1,7 +1,7 @@
 'use strict';
 
-const db               = require('../config/db-connection');
 const InsertRepository = require('./insert/repository');
+const queryRepository  = require('./query/repository');
 
 class UpsertRepository {
   constructor(data, savedData) {
@@ -19,9 +19,7 @@ class UpsertRepository {
   }
 
   selectRepository() {
-    return db
-      .select()
-      .from('repositories')
+    return queryRepository
       .where({
         owner: this.data.owner,
         name: this.data.repo
