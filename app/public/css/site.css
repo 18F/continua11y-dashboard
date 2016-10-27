@@ -245,6 +245,9 @@ header .site-description {
   header .site-description .inner {
     padding: 0.5rem 1rem; }
 
+.rounded {
+  border-radius: 50%; }
+
 .page {
   background-color: white;
   min-height: 300px; }
@@ -271,4 +274,33 @@ footer {
 
 @media screen and (min-width: 960px), screen and (min-height: 960px) and (orientation: landscape) {
   .m-t-inner-left {
-    padding-left: 1rem; } }
+    padding-left: 1rem; }
+  .recent-reports {
+    padding-left: 3rem; } }
+
+.report-summary {
+  padding: 1rem 0; }
+  .report-summary .rounded.status-icon {
+    height: 50px;
+    width: 50px;
+    font-size: 2rem;
+    background-color: #fdb81e; }
+    .report-summary .rounded.status-icon .inner {
+      padding: 5px 10px; }
+    .report-summary .rounded.status-icon.good {
+      background-color: #4aa564;
+      font-size: 3rem; }
+      .report-summary .rounded.status-icon.good .inner {
+        padding-left: 12px; }
+    .report-summary .rounded.status-icon.bad {
+      background-color: #981b1e;
+      color: white; }
+  .report-summary h4 {
+    margin-top: 0; }
+  .report-summary h5 {
+    font-weight: normal;
+    margin: 0.5rem 0; }
+  .report-summary p {
+    font-size: 1.5rem; }
+  .report-summary .spacer {
+    width: 1rem; }

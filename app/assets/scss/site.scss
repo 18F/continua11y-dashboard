@@ -82,6 +82,10 @@ header {
   }
 }
 
+.rounded {
+  border-radius: 50%;
+}
+
 .page {
   background-color: white;
   min-height: 300px;
@@ -126,4 +130,47 @@ footer {
   .m-t-inner-left {
     padding-left: 1rem;
   }
+
+  .recent-reports {
+    padding-left: 3rem;
+  }
 }
+
+.report-summary {
+  padding: 1rem 0;
+
+  .rounded.status-icon {
+    height: 50px;
+    width: 50px;
+    font-size: 2rem;
+
+    .inner {
+      padding: 5px 10px;
+    }
+
+    background-color: $color-gold;
+
+    &.good {
+      background-color: $color-green-light;
+      font-size: 3rem;
+
+      .inner {
+        padding-left: 12px;
+      }
+    }
+
+    &.bad {
+      background-color: $color-secondary-darkest;
+      color: white;
+    }
+  }
+
+  h4 { margin-top: 0; }
+  h5 { font-weight: normal; margin: 0.5rem 0; }
+  p { font-size: 1.5rem; }
+
+  .spacer {
+    width: 1rem;
+  }
+}
+

@@ -1,5 +1,6 @@
 'use strict';
 
+const _           = require('lodash');
 const Mustache    = require('mustache');
 const templates   = require('./templates');
 const views       = require('./views');
@@ -8,8 +9,9 @@ templates.load();
 views.load();
 
 class MustacheRenderer {
-  constructor(name) {
+  constructor(name, data) {
     this.name = name;
+    this.data = data;
   }
 
   render() {
@@ -25,7 +27,9 @@ class MustacheRenderer {
   }
 
   pageView() {
-    return MustacheRenderer.views[this.name];
+    let view = MustacheRenderer.views[this.name];
+    if (_.isFunction(view)) { view = view(this.data); }
+    return view;
   }
 
   layoutView() {

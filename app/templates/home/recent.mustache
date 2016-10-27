@@ -1,3 +1,28 @@
-<h3>Recent accessibility reports</h3>
+<div class='recent-reports'>
+  <h3>Recent accessibility reports</h3>
 
-...
+  {{#recent_reports}}
+  <div class='row report-summary'>
+    <div class='inner-top inner-bottom'>
+      <div class='unit size-1-5'>
+        <div class='rounded status-icon {{status}}'>
+          <div class='inner'>
+            {{{icon_text}}}
+          </div>
+        </div>
+      </div>
+      <div class='unit size-4-5'>
+        <h4>{{repository.owner}}/{{repository.name}}</h4>
+        <h5>{{page_count}} pages tested</h5>
+        <p>
+          <span class='unit'>{{stats.error}} errors</span>
+          <span class='unit spacer'>&nbsp;</span>
+          <span class='unit'>{{stats.warning}} warnings</span>
+          <span class='unit spacer'>&nbsp;</span>
+          <span class='unit'>{{stats.notice}} notices</span>
+        </p>
+      </div>
+    </div>
+  </div>
+  {{/recent_reports}}
+</div>
