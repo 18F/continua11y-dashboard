@@ -63,7 +63,7 @@ class Page extends InsertRecords {
   }
 
   requiredKeys() {
-    return ['report_id', 'path', 'size'];
+    return ['report_id', 'path'];
   }
 
   returningColumns() {
