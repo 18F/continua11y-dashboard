@@ -1,7 +1,7 @@
 'use strict';
 
-const db                   = require('../config/db-connection');
-const ValidateDataPresence = require('./validate-data-presence');
+const db                   = require('../../config/db-connection');
+const ValidateDataPresence = require('../validate-data-presence');
 
 class InsertRecord {
   constructor(data) {

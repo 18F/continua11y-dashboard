@@ -1,6 +1,6 @@
 'use strict';
 
-const InsertRecords = require('../insert-records');
+const InsertRecords = require('./records');
 const InsertIssues  = require('./issues');
 
 class Page extends InsertRecords {

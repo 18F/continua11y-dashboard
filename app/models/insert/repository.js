@@ -1,6 +1,6 @@
 'use strict';
 
-const InsertRecord = require('../insert-record');
+const InsertRecord = require('./record');
 
 class Repository extends InsertRecord {
   attributes() {
