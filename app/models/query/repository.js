@@ -8,3 +8,11 @@ module.exports.where = function where(attributes) {
     .from('repositories')
     .where(attributes);
 };
+
+module.exports.byIds = function byIds(ids) {
+  return db
+    .select()
+    .from('repositories')
+    .orderBy(['owner', 'name'])
+    .whereIn('id', ids);
+};
