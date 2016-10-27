@@ -1,0 +1,22 @@
+<div class='row report-summary'>
+  <div class='inner-top inner-bottom'>
+    <div class='unit size-1-5'>
+      <div class='rounded status-icon {{status}}'>
+        <div class='inner'>
+          {{{icon_text}}}
+        </div>
+      </div>
+    </div>
+    <div class='unit size-4-5'>
+      <h4>{{repository.owner}}/{{repository.name}}</h4>
+      <p>{{page_count}} pages tested</p>
+      <p>
+        <span class='unit'>{{stats.error}} errors</span>
+        <span class='unit spacer'>&nbsp;</span>
+        <span class='unit'>{{stats.warning}} warnings</span>
+        <span class='unit spacer'>&nbsp;</span>
+        <span class='unit'>{{stats.notice}} notices</span>
+      </p>
+    </div>
+  </div>
+</div>

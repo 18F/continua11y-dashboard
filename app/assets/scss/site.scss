@@ -136,7 +136,9 @@ footer {
   }
 }
 
+a .report-summary,
 .report-summary {
+  color: black;
   padding: 1rem 0;
 
   .rounded.status-icon {
@@ -153,6 +155,7 @@ footer {
     &.good {
       background-color: $color-green-light;
       font-size: 3rem;
+      color: white;
 
       .inner {
         padding-left: 12px;
@@ -165,8 +168,7 @@ footer {
     }
   }
 
-  h4 { margin-top: 0; }
-  h5 { font-weight: normal; margin: 0.5rem 0; }
+  h4 { margin-top: 0; text-decoration: underline; }
   p { font-size: 1.5rem; }
 
   .spacer {

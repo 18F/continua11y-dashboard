@@ -20,6 +20,11 @@ module.exports = function home(req, res) {
 
 class HomeRenderer extends MustacheRenderer {
   partials() {
-    return Object.assign({}, MustacheRenderer.templates.home, {page: this.pageTemplate()});
+    return Object.assign(
+      {},
+      MustacheRenderer.templates.home,
+      {report_summary: MustacheRenderer.templates.reports.summary},
+      {page: this.pageTemplate()}
+    );
   }
 }

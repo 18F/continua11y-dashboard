@@ -278,29 +278,38 @@ footer {
   .recent-reports {
     padding-left: 3rem; } }
 
+a .report-summary,
 .report-summary {
+  color: black;
   padding: 1rem 0; }
+  a .report-summary .rounded.status-icon,
   .report-summary .rounded.status-icon {
     height: 50px;
     width: 50px;
     font-size: 2rem;
     background-color: #fdb81e; }
+    a .report-summary .rounded.status-icon .inner,
     .report-summary .rounded.status-icon .inner {
       padding: 5px 10px; }
+    a .report-summary .rounded.status-icon.good,
     .report-summary .rounded.status-icon.good {
       background-color: #4aa564;
-      font-size: 3rem; }
+      font-size: 3rem;
+      color: white; }
+      a .report-summary .rounded.status-icon.good .inner,
       .report-summary .rounded.status-icon.good .inner {
         padding-left: 12px; }
+    a .report-summary .rounded.status-icon.bad,
     .report-summary .rounded.status-icon.bad {
       background-color: #981b1e;
       color: white; }
+  a .report-summary h4,
   .report-summary h4 {
-    margin-top: 0; }
-  .report-summary h5 {
-    font-weight: normal;
-    margin: 0.5rem 0; }
+    margin-top: 0;
+    text-decoration: underline; }
+  a .report-summary p,
   .report-summary p {
     font-size: 1.5rem; }
+  a .report-summary .spacer,
   .report-summary .spacer {
     width: 1rem; }
