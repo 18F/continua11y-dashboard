@@ -145,9 +145,10 @@ a .report-summary,
     height: 50px;
     width: 50px;
     font-size: 2rem;
+    font-weight: bold;
 
     .inner {
-      padding: 5px 10px;
+      padding: 10px 14px
     }
 
     background-color: $color-gold;
@@ -155,6 +156,7 @@ a .report-summary,
     &.good {
       background-color: $color-green-light;
       font-size: 3rem;
+      font-weight: normal;
       color: white;
 
       .inner {

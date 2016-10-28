@@ -287,14 +287,16 @@ a .report-summary,
     height: 50px;
     width: 50px;
     font-size: 2rem;
+    font-weight: bold;
     background-color: #fdb81e; }
     a .report-summary .rounded.status-icon .inner,
     .report-summary .rounded.status-icon .inner {
-      padding: 5px 10px; }
+      padding: 10px 14px; }
     a .report-summary .rounded.status-icon.good,
     .report-summary .rounded.status-icon.good {
       background-color: #4aa564;
       font-size: 3rem;
+      font-weight: normal;
       color: white; }
       a .report-summary .rounded.status-icon.good .inner,
       .report-summary .rounded.status-icon.good .inner {
