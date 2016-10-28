@@ -93,3 +93,13 @@ function marryData(reports, repositories, pageCounts, stats) {
 
   return reports;
 }
+
+module.exports.reportByRepoAndBranch = function reportByRepoAndBranch(owner, name, branch) {
+  return db('reports')
+    .select('reports.id')
+    .join('repositories', 'repositories.id', 'reports.repository_id')
+    .where('repositories.owner', owner)
+    .where('repositories.name', name)
+    .where('reports.branch', branch)
+    .orderBy('run_at', 'desc');
+};

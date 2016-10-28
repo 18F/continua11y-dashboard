@@ -22,7 +22,22 @@ function status(stats) {
   return status;
 }
 
+function colorFor(status) {
+  let color = '757575';
+
+  if (status === STATUSES.bad) {
+    color = 'cd2026';
+  } else if (status === STATUSES.ok) {
+    color = 'fdb81e';
+  } else if (status === STATUSES.good) {
+    color = '2e8540';
+  }
+
+  return color;
+}
+
 module.exports = {
   STATUSES: STATUSES,
-  status: status
+  status: status,
+  colorFor: colorFor
 };

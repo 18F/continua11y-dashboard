@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="134" height="20">
+  <linearGradient x2="0" y2="100%">
+    <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
+    <stop offset="1" stop-opacity=".1"/>
+  </linearGradient>
+  <mask>
+    <rect width="134" height="20" rx="3" fill="#fff"/>
+  </mask>
+  <g mask="url(#{{mask_id}})">
+    <path fill="#555" d="M0 0h78v20H0z"/>
+    <path fill="#{{color}}" d="M78 0h56v20H78z"/>
+    <path fill="url(#{{linear_gradient_id}})" d="M0 0h134v20H0z"/>
+  </g>
+  <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
+    <text x="39" y="15" fill="#010101" fill-opacity=".3">accessibility</text>
+    <text x="39" y="14">accessibility</text>
+    <text x="105" y="15" fill="#010101" fill-opacity=".3">{{message}}</text>
+    <text x="105" y="14">{{message}}</text>
+  </g>
+</svg>
