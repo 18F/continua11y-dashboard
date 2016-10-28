@@ -6,3 +6,6 @@ applications:
   routes:
   - route: continua11y-staging.apps.cloud.gov
   stack: cflinuxfs2
+  services:
+  - continua11y-dashboard-staging-db
+  command: knex migrate:latest; npm start
