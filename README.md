@@ -48,8 +48,8 @@ environmental variables are present.
 Database is postgres and you need to create these databases outside the
 application scripts:
 
-    createdb continua11y_dashboard_test # for test env
-    createdb continua11y_dashboard_development # for development
+    createdb continua11y-dashboard-test # for test env
+    createdb continua11y-dashboard-development # for development
 
 The database sql abstraction is provided by the module `knex`, and other database configuration options can be found in the `./knexfile.js`.
 
