@@ -7,12 +7,13 @@ module.exports = function createReport(req, res) {
     .perform()
     .then(() => {
       res.status(200);
-      res.end({all: 'good'});
+      res.json({all: 'good'});
     })
     .catch((err) => {
       res.status(500);
       res.json({
-        error: err.message
+        error: err.message,
+        //trace: err.stack
       });
     });
 };

@@ -9,6 +9,8 @@ let database = process.env.DATABASE_NAME || 'continua11y-dashboard-' + env;
 let username = process.env.DATABASE_USER_NAME;
 let password = process.env.DATABASE_PASSWORD;
 
+console.log('connecting to database', database);
+
 let config = {
   client: 'postgresql',
   connection: {

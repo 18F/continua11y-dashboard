@@ -2,19 +2,14 @@
 
 const assert        = require('assert');
 const reqData       = require('../fixtures/request-data/reports-success');
+const clearDB       = require('../support/clear-database');
 const SaveReport    = require('../../app/models/save-report');
 const db            = require('../../app/config/db-connection');
 const query         = require('../../app/models/query/report');
 
 describe('queryReport', () => {
   beforeEach((done) => {
-    db('repositories').del().then(() => {
-      db('reports').del().then(() => {
-        db('pages').del().then(() => {
-          db('issues').del().then(() => { done(); });
-        });
-      });
-    });
+    clearDB(done);
   });
 
   describe('.recent(limit)', () => {

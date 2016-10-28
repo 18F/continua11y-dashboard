@@ -3,8 +3,8 @@
 const async                   = require('async');
 const contintua11yAcceptance  = require('continua11y-acceptance');
 
-const server                  = require('./support/test-server');
-const config                  = require('./support/continua11y-acceptance-config.json');
+const server                  = require('../support/test-server');
+const config                  = require('../support/continua11y-acceptance-config.json');
 const accessibilityAcceptance = contintua11yAcceptance(config);
 
 describe('Accessibility of public pages', function() {

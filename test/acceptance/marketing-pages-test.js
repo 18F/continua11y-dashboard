@@ -1,8 +1,8 @@
 'use strict';
 
-const server = require('./support/zombify');
+const server = require('../support/zombify');
 
-describe('Public pages', () => {
+describe('Marketing pages', () => {
   let browser;
 
   before((done) => {
