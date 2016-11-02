@@ -146,6 +146,7 @@ a .report-summary,
     width: 50px;
     font-size: 2rem;
     font-weight: bold;
+    text-align: center;
 
     .inner {
       padding: 10px 14px
@@ -178,3 +179,17 @@ a .report-summary,
   }
 }
 
+pre {
+  background-color: $color-gray-lightest;
+  border: 1px solid $color-gray-lighter;
+  color: $color-primary-darkest;
+}
+
+code {
+  background-color: $color-gray-lightest;
+  color: $color-primary-darkest;
+}
+
+.get-started p {
+  margin-bottom: 1rem;
+}

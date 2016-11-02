@@ -1,1 +1,50 @@
-<h1>Doh! Coming soon</h1>
+<h1>Setting up accessibility testing</h1>
+<p>Currently, we only have Node.js tooling for generating and sending reports. Please see instructions below.</p>
+
+<h2>Node.js tooling</h2>
+
+<h3>Generating reports</h3>
+<p>
+  The node module
+  <a href='https://github.com/18F/node-continua11y-acceptance'>continua11y-acceptance</a>
+  can be used to test accessibility via node acceptance tests. Documentation is available on that github page.
+  The tests in addition to affecting test suite success, also generate reports in the <code>/accessibility</code>
+  directory of the project. It is good practice to reduce the noise of your git commits by ignoring this directory.
+</p>
+
+<p>The generated json reports can be sent to the dashboard via another node package</p>
+
+<h3>Sending reports</h3>
+
+<p>The node module <a href='https://github.com/18F/node-continua11y-ci-reporter'>continua11y-ci-reporter</a> sends reports already generated in the <code>/accessibility</code> directory to the dashboard.
+</p>
+
+<p>
+  You can integrate reporting with your CI via the script
+  <pre><code>
+    continua11y-ci-reporter accessibility
+  </code></pre>
+</p>
+
+<h2>Get your badge</h2>
+
+<p>
+  Badges for your project are available via a url that delivers svg images:
+  <pre><code>
+    {{domain_name}}/badges/:repository_owner/:repository_name/:branch
+  </code></pre>
+</p>
+
+<p>
+  For example a badge for this repository is available at the following url:
+  <a href='/badges/18F/continua11y-dashboard/master'>
+    {{domain_name}}/badges/18F/continua11y-dashboard/master
+  </a>
+</p>
+<p>
+  You can embed the badge on your README markdown like this:
+  <pre><code>
+    [![Continua11y]({{domain_name}}/badges/18F/continua11y-dashboard/master)](https://continua11y-staging.apps.cloud.gov)
+  </code></pre>
+  Of course, you will want to replace your own repository name, owner and main branch for the data embedded.
+</p>
