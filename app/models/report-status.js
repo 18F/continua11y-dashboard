@@ -30,7 +30,7 @@ function colorFor(status) {
   } else if (status === STATUSES.ok) {
     color = 'fdb81e';
   } else if (status === STATUSES.good) {
-    color = '2e8540';
+    color = '44cc11';
   }
 
   return color;
