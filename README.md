@@ -86,6 +86,13 @@ There is a script for that:
 
     npm start
 
+## Getting your badge
+
+SVG badges are available from the dashboard via a url:
+`/badges/:repository_owner/:repository_name/:branch'.
+For example the path for this repository would be
+`/badges/18F/continua11y-dashboard/master`.
+
 ## Public domain
 
 This project is in the worldwide [public domain](LICENSE.md). As stated in [CONTRIBUTING](CONTRIBUTING.md):
